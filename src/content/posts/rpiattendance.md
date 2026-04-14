@@ -1,5 +1,5 @@
 ---
-title: RpiAttendance
+title: Building something with everything I know
 published: 2026-02-10
 description: A full fledged biometric attendance system for Raspberry Pi
 tags: [Linux, Android, Kotlin, KMP, Raspberry Pi, IoT, Python]
@@ -35,7 +35,8 @@ Pycharm, using thonny and geanny on the Pi was like torture. No automatic indent
 word for me causing an instant crashout followed by depression.
 
 Fortunately, besides this project I was also learning Kotlin and Jetpack Compose. The robust type system and syntax with a powerful yet heavy IDE made
-me fall in love with Kotlin. As soon as I discovered Kotlin Multiplatform, I knew I had to use it for this project. Kotlin Multiplatform has an llvm backed compiler that generates native code, eliminating the need for a JVM. This made it perfect to compile a binary to run it on the raspberry pi. 
+me fall in love with Kotlin. As soon as I discovered Kotlin Multiplatform, I knew I had to use it for this project. Kotlin Multiplatform has an llvm backed 
+compiler that generates native code, eliminating the need for a JVM. This made it perfect to compile a binary to run it on the raspberry pi. 
 
 There was one problem that I overlooked. The sensor libraries were written in python and there were no KMP bindings I can use. I could have used the 
 underlying C/C++ libraries directly but that would have been a lot of work (maybe I should do it someday). I decided to neatly wrap up all the Python 
@@ -61,7 +62,8 @@ The whole integration was super seamless and I was able to get the app up and ru
 The only problem that I faced with Kotlin Native was cross compiling the native binary for Arm64 from my x86_64 machine. I figured out a solution by
 setting up a CI job that builds the binary in a preconfigured environment with the necessary toolchain and creates a github release.
 
-To house all of the components together, I created a rought 3D design on Tinkercad with space to fix the Raspberry Pi and the sensors in a Box. The design looks... unfortunate but then, I am just starting to learn 3D modeling. Printed the model using my college's 3D printer after months on grueling
+To house all of the components together, I created a rought 3D design on Tinkercad with space to fix the Raspberry Pi and the sensors in a Box. The 
+design looks... unfortunate but then, I am just starting to learn 3D modeling. Printed the model using my college's 3D printer after months on grueling
 paperwork.
 
 Now that this is complete, the only thing left is to deploy this in my college. Which is easier said than done because of college politics and unnecessary

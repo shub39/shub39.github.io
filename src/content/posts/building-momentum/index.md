@@ -1,5 +1,5 @@
 ---
-title: Building Momentum
+title: Building Momentum. The story so far
 published: 2026-04-05
 description: Making an App to make montages without thinking about editing
 tags: [Android, Jetpack Compose, Kotlin]
@@ -20,11 +20,12 @@ draft: false
 
 # Backstory
 
-I'm sure we have all seen [this](https://www.youtube.com/watch?v=65nfbW-27ps&t=2s&pp=ygUPaHVnbyBjb3JuZWxsaWVy) video by now. The guy consistently took selfies, stored, labelled them 
-and in the end edited those thousands of pictures in a cool montage. Ever since I saw this I have always wanted to make a video
-like this but the sheer logistics and consistency required to take a picture everyday, store it and then edit it was something I did not have. As I learned Android Development, I
-finally felt confident enough in my skills to turn this idea into a real app. So Decided to build this using [Revenuecat Shipaton 2025](https://devpost.com/software/momentum-m95t6u) 
-as an excuse. It's a hackathon conducted by Revenuecat to build and ship an app to the playstore using their sdk to monetize it.
+I'm sure we have all seen [this](https://www.youtube.com/watch?v=65nfbW-27ps&t=2s&pp=ygUPaHVnbyBjb3JuZWxsaWVy) video by now. The guy consistently took selfies, 
+stored, labelled them and in the end edited those thousands of pictures in a cool montage. Ever since I saw this I have always wanted to make a video
+like this but the sheer logistics and consistency required to take a picture everyday, store it and then edit it was something I did not have. As I learned 
+Android Development, I finally felt confident enough in my skills to turn this idea into a real app. So Decided to build this 
+using [Revenuecat Shipaton 2025](https://devpost.com/software/momentum-m95t6u) as an excuse. It's a hackathon conducted by Revenuecat to build and ship an app 
+to the playstore using their sdk to monetize it.
 
 ---
 
@@ -33,19 +34,22 @@ as an excuse. It's a hackathon conducted by Revenuecat to build and ship an app 
 ## Building the Video Maker
 
 This was the hardest part to figure out. Turns out assembling a video is really hard with all the codecs, video formats and standards out there. My first attempt was with
-**FFmpegKit** which is like precompiled ffmpeg binaries already wrapped in JNI. Sadly it was [discontinued](https://tanersener.medium.com/saying-goodbye-to-ffmpegkit-33ae939767e1)
-after I finished making a proof of concept with it. I tried some forks at that time but they were all crashing with codec errors. It was torturous to 
-get it to assemble a single video and then the video won't play because of an obscure cryptic codec error. 
+**FFmpegKit** which is like precompiled ffmpeg binaries already wrapped in JNI. Sadly it was 
+[discontinued](https://tanersener.medium.com/saying-goodbye-to-ffmpegkit-33ae939767e1) after I finished making a proof of concept with it. I tried some forks 
+at that time but they were all crashing with codec errors. It was torturous to get it to assemble a single video and then the video won't play because of an 
+obscure cryptic codec error. 
 
 Since I did not know much about JNI and integrating native binaries into apps back then I decided to give up on it, But one day I randomly asked
-a Chatbot about ways to make videos from a list of bitmaps and it came up with an alternate suggestion. Using [Mediacodec](https://developer.android.com/reference/android/media/MediaCodec)
-I can assemble the video using the device's own codecs, eliminating the need for ffmpeg and JNI altogether.
+a Chatbot about ways to make videos from a list of bitmaps and it came up with an alternate suggestion. Using 
+[Mediacodec](https://developer.android.com/reference/android/media/MediaCodec) I can assemble the video using the device's own codecs, eliminating the need for ffmpeg 
+and JNI altogether.
 
-The API was much more complicated than I expected and understanding it was becoming harder and harder. Thanks to a friend on discord, found [bitmap2video](https://github.com/israel-fl/bitmap2video)
-which is like a proof of concept app and library built with the Mediacodec API. Initially I just copied the video generation part from this library and made it work.
+The API was much more complicated than I expected and understanding it was becoming harder and harder. Thanks to a friend on discord, found 
+[bitmap2video](https://github.com/israel-fl/bitmap2video) which is like a proof of concept app and library built with the Mediacodec API. Initially I just copied 
+the video generation part from this library and made it work.
 
-Later, I customized it to be more efficient and fine tuned with the requirements of the app. Added fixed aspect ratios, removed a bunch of dead code and made a module out of the
-localized changes. At the end I had a very convenient and stable API with a bunch of parameters to customize the videos. Learnt what these complex terms 
+Later, I customized it to be more efficient and fine tuned with the requirements of the app. Added fixed aspect ratios, removed a bunch of dead code and made a module out of 
+the localized changes. At the end I had a very convenient and stable API with a bunch of parameters to customize the videos. Learnt what these complex terms 
 actually mean and got a taste of how complicated dealing with videos is.
 
 ```kotlin
@@ -74,13 +78,15 @@ The core database of the app is simple. Its just a two tables, one of all the pr
 wrapping the location of the image with additional info like date, face data and the project Id to use as a foreign key. All using Room
 
 I really wanted to use as little permissions as I could. Instead of accesing all the media files, I let the user select the image they want to add for a day using the
-[Photopicker API](https://developer.android.com/training/data-storage/shared/photo-picker?hl=en). I was requesting [persistable URI](<https://developer.android.com/reference/android/content/ContentResolver#takePersistableUriPermission(android.net.Uri,%20int)>)
+[Photopicker API](https://developer.android.com/training/data-storage/shared/photo-picker?hl=en). I was requesting 
+[persistable URI](<https://developer.android.com/reference/android/content/ContentResolver#takePersistableUriPermission(android.net.Uri,%20int)>)
 permission for each image that the user selected. Until I started facing some unexpected behaviours in production and discovered it was a ticking time 
 bomb. Not only was this approach really naive but each app is only allowed to have a maximum of 512 persisted URIs at any given moment.
 
 Quickly scrapped that approach and opted for copying the selected images in the app's files directory. Thankfully it was within 512 days so I really 
 dodged a bomb there. The surpring thing is, This limit is not mentioned anywhere in the API docs. The only place I found this was in an obscure 
-github issue (which I can't find anymore) and the [android source code](https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java;l=127?q=MAX_PERSISTED_URI_GRANTS&sq=) 😭
+github issue (which I can't find anymore) and the 
+[android source code](https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java;l=127?q=MAX_PERSISTED_URI_GRANTS&sq=) 😭
 
 ``` java
   // Maximum number of persisted Uri grants a package is allowed
@@ -89,14 +95,15 @@ github issue (which I can't find anymore) and the [android source code](https://
 
 ## Extracting faces from Images
 
-This was simple, I knew [mlkit](https://developers.google.com/ml-kit) had an API for extracting faces from images for android. So I implemented it pretty easily. But as the number of
-images in a project grew, It became clear that the bounding boxes were not that accurate. The images won't seamlessly transtition over each other and the final result came out jarring
-Mlkit is also a closed source library, meaning I could not know how it works, publish my app on FOSS appstores, add features or debug it properly. Also for some reasons mlkit processes
-can't run inside coroutines? it can only run in google's `com.google.android.gms.tasks.Tasks`. This really bothered me.
+This was simple, I knew [mlkit](https://developers.google.com/ml-kit) had an API for extracting faces from images for android. So I implemented it pretty easily. But as 
+the number of images in a project grew, It became clear that the bounding boxes were not that accurate. The images won't seamlessly transtition over each other and the 
+final result came out 
+jarring Mlkit is also a closed source library, meaning I could not know how it works, publish my app on FOSS appstores, add features or debug it properly. Also for some 
+reasons mlkit processes can't run inside coroutines? it can only run in google's `com.google.android.gms.tasks.Tasks`. This really bothered me.
 
-Then I came across mediapipe which is also a google library that is more like a harness to run ml tasks across many devices seamlessly. It was FOSS and and was much more accurate and
-powerful than mlkit. The only downside is it is heavy and requires tasks to be included as assets. Besides face detection it can also be used to analyze face landmarks, pose detection,
-emotions and much more which will be useful in the future for other features.
+Then I came across mediapipe which is also a google library that is more like a harness to run ml tasks across many devices seamlessly. 
+It was FOSS and and was much more accurate and
+powerful than mlkit. The only downside is it is heavy and requires tasks to be included as assets. Besides face detection it can also be used to analyze face landmarks, pose detection, emotions and much more which will be useful in the future for other features.
 
 One very peculiar thing I noticed with Mediapipe. It has a google logging library built in, GoogleDataTransport. It is an internal library that they use in their sdks for logging usage
 I tried to exclude this from my app by excluding it in buildscripts, which caused crashes. Then I tried stripping it out using proguard, that caused unexpected bugs. Finally I decided

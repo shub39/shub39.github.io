@@ -1,5 +1,5 @@
 ---
-title: Switching to Niri
+title: Goodbye Hyprland, Hello Niri
 published: 2026-03-06
 description: Friendship ended with Hyprland, Now Niri is my best friend
 tags: [Linux, Dotfiles, Niri]
@@ -9,7 +9,8 @@ draft: false
 
 About 3 years ago, I decided I've had enough of Windows 11s bs and decided to switch to linux. Started with linux mint, got familiar with the terminal
 and basic linux concepts. Then I moved to fedora and loved it. One day I stumbled upon a subreddit called 
-[r/Unixporn](https://www.reddit.com/r/unixporn/). Its a place were linux users customize their desktop environments and share their setups. It really inspired me to explore this thing called Hyprland and build my own setup.
+[r/Unixporn](https://www.reddit.com/r/unixporn/). Its a place were linux users customize their desktop environments and share their setups. It really inspired me 
+to explore this thing called Hyprland and build my own setup.
 
 With a goal I switched to Archlinux and configured Hyprland on it. Customised every single detail to my liking and made it truly my own. I even setup a
 dotfiles repo to keep track of all my changes and have a backup of my setup that I can easily reuse on other machines. Even made a really dramatic 
@@ -42,7 +43,9 @@ When I discovered Niri I tried to switch to it right away but something felt off
 The idea of an infinitely scrolling row of windows was really sitting right with me. But the lack of multiple config files made me put it off for later.
 
 Eventually they added support for it and I made the switch as soon as I could. Its been about a month of using Niri and I really like it! The overview of
-all my active workspaces and a screenshot utility baked in are really nice. Especially in Android Studio, my workflow has significantly improved. I use a single 27 inch monitor and viewing every part of my workflow was difficult on hyprland. Now I can easily isolate the emulator, the file window, the terminal, the debugger, and all studio stuff in a single workspace and easily scroll/sweep through them. Same for every other application. 
+all my active workspaces and a screenshot utility baked in are really nice. Especially in Android Studio, my workflow has significantly improved. I use a 
+single 27 inch monitor and viewing every part of my workflow was difficult on hyprland. Now I can easily isolate the emulator, the file window, the terminal, 
+the debugger, and all studio stuff in a single workspace and easily scroll/sweep through them. Same for every other application. 
 
 I am using Quickshell for the Bar and widgets and while I am still getting used to it, It works really well with Niri. It consumes a bit more RAM than
 just using rofi and waybar but its infinitely more customizable. I think I'll stick with this for years to come.

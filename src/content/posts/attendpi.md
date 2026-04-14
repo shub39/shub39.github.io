@@ -1,5 +1,5 @@
 ---
-title: AttendPi
+title: My first Rust Program. It went horribly
 published: 2025-07-16
 description: Attempt at a Biometric attendance system with Raspberry Pi. Written in Rust 
 tags: [Linux, IoT, Raspberry Pi, Rust]
