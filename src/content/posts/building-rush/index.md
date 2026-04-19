@@ -1,11 +1,11 @@
 ---
 title: The quest to make the Perfect Lyrics App
-published: 2026-04-18
+published: 2026-04-19
 description: Building Rush. An app to save search and share lyrics like Spotify!
 tags: [ Android, Jetpack Compose, Kotlin, Rush ]
 category: Projects
 image: cover.png
-draft: true
+draft: false
 ---
 
 # Screenshots
