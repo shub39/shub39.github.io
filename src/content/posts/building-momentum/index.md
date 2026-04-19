@@ -2,7 +2,7 @@
 title: Building a montage maker
 published: 2026-04-05
 description: Making an App to make montages without thinking about editing, using Mediapipe and low level Android APIs
-tags: [ Android, Jetpack Compose, Kotlin ]
+tags: [ Android, Jetpack Compose, Kotlin, Momentum ]
 category: Projects
 image: cover.png
 draft: false
