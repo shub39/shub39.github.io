@@ -36,7 +36,7 @@ you view lyrics regardless of the music player you use.
 Initially, I was using only genius for the lyrics. The Genius API is good for getting accurate lyrics of songs as it is
 a database of lyrics and metadata which is constantly under review by an active community. The only problem is the API
 has no proper documentation mentioning rate limits. **Their free tier only provides song metadata.** Another similar app
-[FastLyrics](https://github.com/teccheck/FastLyrics) was also using genius for lyrics and apparantly the dev got an API
+[FastLyrics](https://github.com/teccheck/FastLyrics) was also using genius for lyrics and apparently the dev got an API
 token with unrestricted access to all song data including lyrics. But I could not figure out how to get that kind of
 token anywhere. according to the dev there should be a way to create a better token,
 [but it costs a little bit](https://github.com/teccheck/FastLyrics/issues/38). So I asked them if I can use their Token
@@ -97,8 +97,7 @@ is prompted to allow this permission. This can make a lot of users to stop using
 is FOSS and I will keep it that way. Users can audit easily what the app does with the permission and with the help of
 LLMs it's much easier now.
 
-I think the Mediacontroller API can be decoupled from NotificationManager and kept as a separate permission. If I get an
-influential position in Android, I'll definitely push for this.
+I think the Mediacontroller API can be decoupled from NotificationManager and kept as a separate permission.
 
 ## Rush Mode
 
@@ -241,23 +240,24 @@ Rush is available on the Play Store, F-Droid and IzzyOnDroid. The links can be f
 set up CI actions to automatically build and release the apk on GitHub on every commit starting with **[release]**
 from there the F-droid and IzzyOnDroid servers detect the release and add it to their listings. F-Droid builds and
 signs the apk in their own servers, confirming reproducibility. Play store releases are manual as they are made with a
-separate applicationId. Why? well that's a story for another day.
+separate applicationId and need to be aabs. There are services like [tramline](https://tramline.dev/) for automated
+playstore releases, but I am too paranoid to try them.
 
 ---
 
 # Conclusion
 
-In some sense, I feel proud of the work I have put into this. This project feels my own child now. From making 
+In some sense, I feel proud of the work I have put into this. This project feels my own child now. From making
 utterly dumb mistakes to fixing misconceptions and wrong understanding about the Android platform, This project has
 seen it all. I can safely say that Rush has reached its final stages. There is really nothing significant left to add
-to it now. It's exactly as how I envisioned it when I started making this. And I still keep under-estimating myself. 
+to it now. It's exactly as how I envisioned it when I started making this. And I still keep under-estimating myself.
 This project has been a journey and a way of making many great friends.
 
-I will keep Rush updated to the latest design standards and add some 
+I will keep Rush updated to the latest design standards and add some
 [leftover features](https://github.com/shub39/Rush/discussions/113). Possibly maybe write my own backend for lyrics
-and host it. Removing dependency on Genius and making it completely FOSS. 
+and host it. Removing dependency on Genius and making it completely FOSS.
 
-Probably add a feature to generate lyrics for your local tracks using a local model. The advancements made by Gemma 4 
-look promising in that aspect. 
+Probably add a feature to generate lyrics for your local tracks using a local model. The advancements made by Gemma 4
+look promising in that aspect.
 
 Thanks for Reading!
