@@ -1,5 +1,5 @@
 ---
-title: Building Momentum. The story so far
+title: Building a montage maker
 published: 2026-04-05
 description: Making an App to make montages without thinking about editing, using Mediapipe and low level Android APIs
 tags: [ Android, Jetpack Compose, Kotlin ]
@@ -12,11 +12,9 @@ draft: false
 
 ::github{repo="shub39/Momentum"}
 
-| ![1](./1.png) | ![2](./2.png) |
-|:-------------:|:-------------:|
-| ![3](./3.png) | ![4](./4.png) |
+| ![1](./1.png) | ![2](./2.png) | ![3](./3.png) | ![4](./4.png) |
+|:-------------:|:-------------:|:-------------:|:-------------:|
 
----
 
 # Backstory
 
