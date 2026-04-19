@@ -38,8 +38,8 @@ a database of lyrics and metadata which is constantly under review by an active 
 has no proper documentation mentioning rate limits. **Their free tier only provides song metadata.** Another similar app
 [FastLyrics](https://github.com/teccheck/FastLyrics) was also using genius for lyrics and apparently the dev got an API
 token with unrestricted access to all song data including lyrics. But I could not figure out how to get that kind of
-token anywhere. according to the dev there should be a way to create a better token,
-[but it costs a little bit](https://github.com/teccheck/FastLyrics/issues/38). So I asked them if I can use their Token
+token anywhere. According to the dev "there should be a way to create a better token,
+[but it costs a little bit](https://github.com/teccheck/FastLyrics/issues/38)". So I asked them if I can use their Token
 for now and they agreed. It was great to build out the first prototype of the app. One problem was Genius only provided
 unsynced lyrics. But the accuracy was worth keeping it in the app still. Also, they have a good search API with the huge
 database they have, that provides album art to make search results better. I kept Genius for the search and as a
