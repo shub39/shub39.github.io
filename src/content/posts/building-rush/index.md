@@ -111,7 +111,18 @@ automatically fetches lyrics for it.
 The Mediacontroller API provides callbacks when song metadata changes. Using that I set up a flow to trigger a fetch.
 It's pretty simple but very convenient.
 
+## The Database
+
+Rush uses a simple SQLite database using ROOM, All the tracks are uniquely identified by their ID, which is obtained
+from their corresponding Genius ID. It's just a simple table. I had to migrate it twice while adding columns for synced
+and syllable-synced lyrics. With the help of schemas and 
+
 ## Building the UI
+
+It's all Jetpack Compose following MVI(Model-View-Intent) principles. All screens consist of a simple composable that 
+only take a state to render UI, making previews and tests easier. 
+
+## Implementing the Share Cards
 
 ## Distribution
 
