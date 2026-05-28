@@ -55,7 +55,12 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/Rushed.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Shubham Gorai",
 	bio: "Android/KMP Dev and Linux Nerd",
-	links: [
+  links: [
+    {
+      name: "Twitter",
+      icon: "fa6-brands:twitter",
+      url: "https://x.com/_shub39",
+    },
 		{
 			name: "LinkedIn",
 			icon: "fa6-brands:linkedin",
