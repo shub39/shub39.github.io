@@ -1,6 +1,6 @@
 ---
 title: List of words that I don't like
-published: 2026-06-10
+published: 2025-06-10
 description: Somehow these words feel wrong?
 category: Opinion
 draft: false
