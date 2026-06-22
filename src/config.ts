@@ -13,12 +13,12 @@ export const siteConfig: SiteConfig = {
 	lang: "en",
 	themeColor: {
 		hue: 39,
-		fixed: false, 
+		fixed: false,
 	},
 	banner: {
 		enable: false,
-		src: "assets/images/Banner.jpg", 
-		position: "center", 
+		src: "assets/images/Banner.jpg",
+		position: "center",
 		credit: {
 			enable: false, // Display the credit text of the banner image
 			text: "", // Credit text to be displayed
@@ -26,16 +26,16 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	toc: {
-		enable: true, 
+		enable: true,
 		depth: 2, // Maximum heading depth to show in the table, from 1 to 3
 	},
 	favicon: [
 		// Leave this array empty to use the default favicon
 		{
-		  src: '/favicon/favicon-32x32.png',    // Path of the favicon, relative to the /public directory
-		  theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
-		  // sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
-		}
+			src: "/favicon/favicon-32x32.png", // Path of the favicon, relative to the /public directory
+			theme: "light", // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
+			// sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
+		},
 	],
 };
 
@@ -55,12 +55,12 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/Rushed.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Shubham Gorai",
 	bio: "Android/KMP Dev and Linux Nerd",
-  links: [
-    {
-      name: "Twitter",
-      icon: "fa6-brands:twitter",
-      url: "https://x.com/_shub39",
-    },
+	links: [
+		{
+			name: "Twitter",
+			icon: "fa6-brands:twitter",
+			url: "https://x.com/_shub39",
+		},
 		{
 			name: "LinkedIn",
 			icon: "fa6-brands:linkedin",
@@ -75,12 +75,12 @@ export const profileConfig: ProfileConfig = {
 			name: "YouTube",
 			icon: "fa6-brands:youtube",
 			url: "https://youtube.com/@shub39",
-    },
-    {
-      name: "Instagram",
-      icon: "fa6-brands:instagram",
-      url: "https://instagram.com/_shub39",
-		}
+		},
+		{
+			name: "Instagram",
+			icon: "fa6-brands:instagram",
+			url: "https://instagram.com/_shub39",
+		},
 	],
 };
 

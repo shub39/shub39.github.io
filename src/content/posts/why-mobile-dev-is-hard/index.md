@@ -1,7 +1,7 @@
 ---
-title: Why becoming an Android developer is hard
+title: Android dev is not welcoming for beginners
 published: 2026-06-21
-description: Mobile is the most exclusive and exhaustive platform to build for.
+description: this is becoming the most exclusive and exhaustive platform to build for.
 tags: [ Android ]
 category: Opinion
 draft: false
