@@ -72,19 +72,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://bsky.app/profile/shub39.bsky.social",
 		},
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter",
-			url: "https://x.com/_shub39",
-		},
-		{
 			name: "LinkedIn",
 			icon: "fa6-brands:linkedin",
 			url: "https://www.linkedin.com/in/shub39/",
-		},
-		{
-			name: "Instagram",
-			icon: "fa6-brands:instagram",
-			url: "https://instagram.com/_shub39",
 		},
 	],
 };
