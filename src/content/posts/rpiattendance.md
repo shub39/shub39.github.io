@@ -4,7 +4,6 @@ published: 2026-02-10
 description: A full fledged biometric attendance system for Raspberry Pi
 tags: [ Linux, Android, Kotlin, KMP, Raspberry Pi, IoT, Python ]
 category: Projects
-image: https://raw.githubusercontent.com/shub39/RpiAttendance/master/screenshots/pic.jpg
 draft: false
 ---
 
@@ -109,15 +108,3 @@ integrates a lot of systems and works
 across different platforms are immense. This was wayy more rewarding and fun than a simple ToDo app clone. In this age
 of cheap, mass produced software,
 the winning edge is building quality software.
-
-I have also made a youtube video demonstrating this project. Thanks for reading!
-
-<iframe
-width="100%"
-height="468"
-src="https://www.youtube.com/embed/sc254TMSav4"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-
