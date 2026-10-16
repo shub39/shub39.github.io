@@ -39,7 +39,7 @@ has no proper documentation mentioning rate limits. **Their free tier only provi
 [FastLyrics](https://github.com/teccheck/FastLyrics) was also using genius for lyrics and apparently the dev got an API
 token with unrestricted access to all song data including lyrics. But I could not figure out how to get that kind of
 token anywhere. According to the dev "there should be a way to create a better token,
-[but it costs a little bit](https://github.com/teccheck/FastLyrics/issues/38)". So I asked them if I can use their Token
+[but it costs a little bit](https://github.com/teccheck/FastLyrics/issues/38)". So I asked them if I can use their token
 for now and they agreed. It was great to build out the first prototype of the app. One problem was Genius only provided
 unsynced lyrics. But the accuracy was worth keeping it in the app still. Also, they have a good search API with the huge
 database they have, that provides album art to make search results better. I kept Genius for the search and as a
@@ -47,10 +47,10 @@ fallback for accurate lyrics.
 
 Eventually I started scraping from the search metadata that genius provided, As it had the link to the genius page. It
 worked for a while but soon genius started to change its frontend code and the scrapers broke. It was rough for a few
-weeks as when I changed the scraper logic and pushed and update, they changed the frontend code again and repeat.
-finally I decided to scrape from a better source. [Dumb](https://github.com/rramiachraf/dumb) is a no nonsense frontend
+weeks as when I changed the scraper logic and pushed an update, they changed the frontend code again and repeat.
+Finally I decided to scrape from a better source. [Dumb](https://github.com/rramiachraf/dumb) is a no nonsense frontend
 for genius with self-hostable instances. I basically use the genius API for search and try to scrape from it. On
-failiure, one of the active dumb instances is scraped. This may seem very unreliable. Maybe I should build my own
+failure, one of the active dumb instances is scraped. This may seem very unreliable. Maybe I should build my own
 backend to handle these instead of dumping all responsibilities to the client.
 
 ### LRCLIB
@@ -80,9 +80,9 @@ would be an understatement.
 I used the [Mediacontroller](https://developer.android.com/reference/android/media/session/MediaController) API to get
 current song playback info from the notification manager. It was quite finicky at first but after many iterations its
 stable and reliable now. The logic is wrapped in a Medialistener object and suspend functions are exposed to
-pause/resume playback or skip to previous/next track. Also, the ability to set playabck to a particluar timestamp by
-just tapping at a line in the UI. This was added by [bartoostveen](https://github.com/bartoostveen), This contribution
-really opened up my mind as I was just a begginer at that time. A very miniscule change that significantly increased the
+pause/resume playback or skip to previous/next track. Also, the ability to set playback to a particular timestamp by
+just tapping at a line in the UI. This was added by [bartoostveen](https://github.com/bartoostveen). This contribution
+really opened up my mind as I was just a beginner at that time. A very minuscule change that significantly increased the
 possibilities. I suddenly became aware there is so much more possible with the Android APIs.
 
 :::note[SIDETRACK]
@@ -114,7 +114,7 @@ It's pretty simple but very convenient.
 
 Rush uses a simple SQLite database using ROOM, All the tracks are uniquely identified by their ID, which is obtained
 from their corresponding Genius ID. It's just a simple table. I had to migrate it twice while adding columns for synced
-and syllable-synced lyrics. With the help of schemas and Migration Tests, Its become pretty easy to manage it. I have
+and syllable-synced lyrics. With the help of schemas and Migration Tests, it's become pretty easy to manage it. I have
 implemented a way to export or import the database of saved lyrics through a JSON file. Just serializing and
 deserializing the contents of the database.
 
@@ -152,7 +152,7 @@ data class TextPrefs(
 - `textPrefs` : Parameters for controlling text. Users can customize the fontSize, lineHeight, letterSpacing,
   lyricsAlignment, etc. To make it look exactly as they want.
 - `cardColors` : Users can select between **MUTED**, **VIBRANT** and **CUSTOM**. MUTED and VIBRANT colors are
-  extracted form the Album Art of the track using [Kmpalette](https://github.com/jordond/kmpalette). While the custom
+  extracted from the Album Art of the track using [Kmpalette](https://github.com/jordond/kmpalette). While the custom
   option lets the user choose their own background and content colors. Using
   [colorpicker-compose](https://github.com/skydoves/colorpicker-compose). The custom colors are stored in
   `mCardBackground` and `mCardContent`
@@ -183,7 +183,7 @@ approach.
 
 ## The Share Cards
 
-I wanted this to be the highlight feature of Rush. But it turned out to be the least used feature. At least I use It
+I wanted this to be the highlight feature of Rush. But it turned out to be the least used feature. At least I use it
 enough to justify maintaining it. I have put a lot of effort into building this.
 
 Initially, I just used the `rememberGraphicsLayer()` function to create a scoped graphics layer and drew the composable
@@ -231,7 +231,7 @@ fun TextStyle.fromPx(
 }
 ```
 
-There are a large variety of cards available with customizable feature on each one. I really want to explain each one
+There are a large variety of cards available with customizable features on each one. I really want to explain each one
 here, but It would be boring. It'll be better if you download Rush and explore the options yourself!
 
 ## Distribution

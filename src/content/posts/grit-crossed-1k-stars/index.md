@@ -18,7 +18,7 @@ draft: false
 # Reflection
 
 I made Grit two years ago as an alternative to [Loop](https://loophabits.org/) with only the features that I needed.
-never thought it will surpass my previous app, Rush in GitHub stars. It's a very trivial stat but I'm proud of it.
+Never thought it will surpass my previous app, Rush in GitHub stars. It's a very trivial stat but I'm proud of it.
 Made a video talking about it. 
 
 <iframe

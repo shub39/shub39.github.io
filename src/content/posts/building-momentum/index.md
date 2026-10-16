@@ -24,7 +24,7 @@ montage. Ever since I saw this I have
 always wanted to make a video like this but the sheer logistics and consistency required to take a picture every day,
 store it and then edit it was
 something I did not have. As I learned Android Development, I finally felt confident enough in my skills to turn this
-idea into a real app. So Decided to build this
+idea into a real app. So decided to build this
 using [Revenuecat Shipaton 2025](https://devpost.com/software/momentum-m95t6u) as an excuse. It's a hackathon conducted
 by Revenuecat to build and ship an app
 to the playstore using their sdk to monetize it.
@@ -44,9 +44,9 @@ at that time, but they were all crashing with codec errors. It was torturous to 
 then the video won't play because of an
 obscure cryptic codec error.
 
-Since I did not know much about JNI and integrating native binaries into apps back then I decided to give up on it, But
+Since I did not know much about JNI and integrating native binaries into apps back then I decided to give up on it, but
 one day I randomly asked
-a Chatbot about ways to make videos from a list of bitmaps, and it came up with an alternate suggestion. Using
+a chatbot about ways to make videos from a list of bitmaps, and it came up with an alternate suggestion. Using
 [Mediacodec](https://developer.android.com/reference/android/media/MediaCodec) I can assemble the video using the
 device's own codecs, eliminating the need for ffmpeg
 and JNI altogether.
@@ -117,7 +117,7 @@ GitHub issue (which I can't find anymore) and the
 This was simple, I knew [mlkit](https://developers.google.com/ml-kit) had an API for extracting faces from images for
 android. So I implemented it pretty easily. But as
 the number of images in a project grew, It became clear that the bounding boxes were not that accurate. The images won't
-seamlessly transtition over each other and the
+seamlessly transition over each other and the
 final result came out
 jarring. Mlkit is also a closed source library, meaning I could not know how it works, publish my app on FOSS appstores,
 add features or debug it properly. Also for some
@@ -134,10 +134,10 @@ the future for other features.
 One very peculiar thing I noticed with Mediapipe. It has a Google logging library built in, GoogleDataTransport. It is
 an internal library that they use in their sdks for logging usage.
 I tried to exclude this from my app by excluding it in buildscripts, which caused crashes. Then I tried stripping it out
-using proguard, that caused unexpected bugs. Finally, I decided
+using ProGuard, that caused unexpected bugs. Finally, I decided
 to let it be but remove the network permission for the app entirely in the GitHub release. Without the network
 permission the app can't log anything. It was crazy to see the lengths
-google is going to collect telemetry. When a log attempt failed for some reason, It scheduled a job to try again later!
+google is going to collect telemetry. When a log attempt failed for some reason, it scheduled a job to try again later!
 I'm probably naive, but I don't
 get why telemetry is that important.
 
@@ -297,7 +297,7 @@ is using mlkit for face stabilization. The app is great but its way too big (200
 curious if it can be optimised
 somehow or are flutter apps expected to be that big?
 
-I want to add many more features, A centralized page to manage all the generated montages, Camera Integration to take
+I want to add many more features, a centralized page to manage all the generated montages, camera integration to take
 pictures from within the app, A
 background worker to generate montages if there are a lot of images, and more customisation options. Also want to
 include a picture mode like the BeReal
