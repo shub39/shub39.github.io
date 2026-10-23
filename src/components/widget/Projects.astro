@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon/components";
+import { projectsConfig } from "../../config";
+import ImageWrapper from "../misc/ImageWrapper.astro";
+
+const config = projectsConfig;
+const projects = config.projects ?? [];
+const hasProjects = config.enable && projects.length > 0;
+---
+
+{hasProjects && (
+    <div class="card-base px-6 md:px-9 py-6 md:py-7">
+        <div class="flex items-center gap-2.5 mb-5">
+            <Icon name="material-symbols:work-outline" class="text-[var(--primary)] text-[1.75rem]"></Icon>
+            <h2 class="text-2xl font-bold text-90">{config.title}</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {projects.map((project) => (
+                <div class="group flex flex-col rounded-[var(--radius-large)] overflow-hidden bg-[var(--btn-plain-bg-hover)] transition duration-300 hover:-translate-y-0.5">
+                    <div class="relative w-full aspect-[16/9] overflow-hidden">
+                        {project.image ? (
+                            <ImageWrapper
+                                src={project.image}
+                                alt={`${project.name} preview`}
+                                class="w-full h-full transition duration-500 group-hover:scale-105"
+                            ></ImageWrapper>
+                        ) : (
+                            <div class="w-full h-full flex items-center justify-center bg-[var(--btn-regular-bg)]">
+                                <Icon
+                                    name={project.icon || "material-symbols:code-rounded"}
+                                    class="text-[var(--primary)] text-5xl"
+                                ></Icon>
+                            </div>
+                        )}
+                        {project.image && project.icon && (
+                            <div class="absolute bottom-3 left-3 z-10 flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--card-bg)] shadow-lg">
+                                <Icon name={project.icon} class="text-[var(--primary)] text-[1.5rem]"></Icon>
+                            </div>
+                        )}
+                    </div>
+                    <div class="flex flex-col flex-1 p-4">
+                        <div class="font-bold text-lg text-90 mb-1">{project.name}</div>
+                        {project.description && <div class="text-sm text-75 mb-3">{project.description}</div>}
+                        {project.tags && project.tags.length > 0 && (
+                            <div class="flex flex-wrap gap-1.5 mb-3">
+                                {project.tags.map((tag) => (
+                                    <span class="text-xs px-2 py-0.5 rounded-md bg-[var(--btn-regular-bg)] text-[var(--btn-content)]">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                        {project.links && project.links.length > 0 && (
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                {project.links.map((link) => (
+                                    <a
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener"
+                                        aria-label={link.name}
+                                        class="btn-regular rounded-lg h-9 px-3 gap-2 text-sm font-bold active:scale-95"
+                                    >
+                                        {link.icon && <Icon name={link.icon} class="text-[1.25rem]"></Icon>}
+                                        {link.name}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+)}
