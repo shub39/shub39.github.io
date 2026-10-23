@@ -3,6 +3,7 @@ import type {
 	LicenseConfig,
 	NavBarConfig,
 	ProfileConfig,
+	ProjectsConfig,
 	SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
@@ -42,10 +43,13 @@ export const siteConfig: SiteConfig = {
 export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
-		LinkPreset.About,
+		{
+			name: "Blog",
+			url: "/blog/", // Internal links should not include the base path, as it is automatically added
+		},
 		{
 			name: "GitHub",
-			url: "https://github.com/shub39", // Internal links should not include the base path, as it is automatically added
+			url: "https://github.com/shub39",
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
@@ -70,11 +74,119 @@ export const profileConfig: ProfileConfig = {
 			name: "Bluesky",
 			icon: "fa6-brands:bluesky",
 			url: "https://bsky.app/profile/shub39.bsky.social",
+    },
+    {
+			name: "Twitter",
+			icon: "fa6-brands:twitter",
+			url: "https://x.com/_shub39",
 		},
 		{
 			name: "LinkedIn",
 			icon: "fa6-brands:linkedin",
 			url: "https://www.linkedin.com/in/shub39/",
+		},
+	],
+};
+
+export const projectsConfig: ProjectsConfig = {
+	enable: true,
+	title: "Projects",
+	projects: [
+		{
+			name: "Rush",
+			description:
+				"A lyrics app to search, save and share lyrics like Spotify. Built with Jetpack Compose.",
+			image: "https://raw.githubusercontent.com/shub39/Rush/refs/heads/master/fastlane/metadata/android/en-US/images/featureGraphic.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+			icon: "fa6-brands:android",
+			tags: ["Android", "Kotlin Multiplatform", "Compose"],
+      links: [
+        {
+					name: "Play Store",
+					url: "https://play.google.com/store/apps/details?id=com.shub39.rush.play",
+					icon: "fa6-brands:google-play",
+				},
+				{
+					name: "GitHub",
+					url: "https://github.com/shub39/Rush",
+					icon: "fa6-brands:github",
+				},
+			],
+		},
+		{
+			name: "Grit",
+			description:
+				"A simple, offline-first habit tracker for Android. 1k+ stars on GitHub.",
+			image: "https://raw.githubusercontent.com/shub39/Grit/refs/heads/master/fastlane/metadata/android/en-US/images/featureGraphic.png",
+			icon: "fa6-brands:android",
+			tags: ["Android", "Kotlin Multiplatform", "Compose"],
+      links: [
+        {
+					name: "Play Store",
+					url: "https://play.google.com/store/apps/details?id=com.shub39.grit",
+					icon: "fa6-brands:google-play",
+				},
+				{
+					name: "GitHub",
+					url: "https://github.com/shub39/grit",
+					icon: "fa6-brands:github",
+				},
+			],
+		},
+		{
+			name: "Momentum",
+			description:
+				"A montage maker that edits for you, powered by Mediapipe and low level Android APIs.",
+			image: "https://raw.githubusercontent.com/shub39/Momentum/refs/heads/master/fastlane/metadata/android/en-US/images/featureGraphic.png",
+			icon: "fa6-brands:android",
+			tags: ["Android", "Mediapipe", "Compose"],
+			links: [
+				{
+					name: "Play Store",
+					url: "https://play.google.com/store/apps/details?id=shub39.momentum.play",
+					icon: "fa6-brands:google-play",
+        },
+        {
+					name: "GitHub",
+					url: "https://github.com/shub39/Momentum",
+					icon: "fa6-brands:github",
+				},
+			],
+    },
+    {
+			name: "Dharmik",
+			description:
+				"Read the Bhagavad Gita offline with audio, translations & commentaries.",
+			image: "https://raw.githubusercontent.com/shub39/Dharmik/refs/heads/master/fastlane/metadata/android/en-US/images/featureGraphic.png",
+			icon: "fa6-brands:android",
+			tags: ["Android", "Kotlin Multiplatform", "Compose"],
+			links: [
+				{
+					name: "Play Store",
+					url: "https://play.google.com/store/apps/details?id=com.shub39.dharmik.online",
+					icon: "fa6-brands:google-play",
+          },
+          {
+					name: "GitHub",
+					url: "https://github.com/shub39/Dharmik",
+					icon: "fa6-brands:github",
+				},
+			],
+		},
+		{
+			name: "AttendPi",
+			description:
+				"A biometric attendance system running on a Raspberry Pi, written in Rust.",
+			image:
+				"https://raw.githubusercontent.com/shub39/attendpi/refs/heads/master/pics/2.jpg",
+			icon: "fa6-brands:rust",
+			tags: ["Rust", "IoT", "Raspberry Pi"],
+			links: [
+				{
+					name: "GitHub",
+					url: "https://github.com/shub39/attendpi",
+					icon: "fa6-brands:github",
+				},
+			],
 		},
 	],
 };

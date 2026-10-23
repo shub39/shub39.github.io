@@ -77,6 +77,27 @@ export type LicenseConfig = {
 	url: string;
 };
 
+export type ProjectLink = {
+	name: string;
+	url: string;
+	icon?: string;
+};
+
+export type ProjectConfig = {
+	name: string;
+	description?: string;
+	image?: string;
+	icon?: string;
+	tags?: string[];
+	links?: ProjectLink[];
+};
+
+export type ProjectsConfig = {
+	enable: boolean;
+	title?: string;
+	projects: ProjectConfig[];
+};
+
 export type LIGHT_DARK_MODE =
 	| typeof LIGHT_MODE
 	| typeof DARK_MODE
