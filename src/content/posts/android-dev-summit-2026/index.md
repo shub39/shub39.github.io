@@ -1,6 +1,6 @@
 ---
 title: Android Dev Summit 2026
-published: 2026-11-01
+published: 2026-11-03
 description: Making a note of all the new and exciting things 
 tags: [ Android, Jetpack Compose, Kotlin ]
 category: Summary
@@ -19,6 +19,8 @@ draft: false
 - GoogleBooks
 - First Android XR Device. XReal Aura with a live demo of the product.
 
+---
+
 # [The latest in Android dev tools](https://youtu.be/w-auFZP5gJo)
 
 ![New Devtools](new_devtools.png)
@@ -27,6 +29,8 @@ draft: false
 - Rent remote devices for testing from cli 😢
 - Run apps directly on Linux using prototype 🤯
 - Agents tab in studio caught up with the rest of the world
+
+---
 
 # [Integrate your app with Android Intelligence](https://youtu.be/UsqDEfyOH2E)
 
@@ -42,9 +46,7 @@ draft: false
 - This is an early access feature, you need to apply for access through the QR code at the end of 
 the video
 
-### Connected Talks
-- Unlock Agentic capabilities with MLKit Gen AI
-- Extend your app to Gemini and Search with the Connected Apps Platform
+---
 
 # [Inside Gemini Nano and Gemma 4](https://youtu.be/ekS4_gV6Ojc)
 
@@ -63,3 +65,49 @@ concepts, I will suggest you to look these up
 
 ![](gemini_nano.png)
 
+---
+
+# [Optimizing with MLKit APIs](https://youtu.be/p-SZ1rWvErU)
+
+![](mlkit_optimizations.png)
+
+- A lot of cool breakthroughs in running models offline. Gemini Nano 4 uses significantly less RAM
+than before
+- MLKit APIs already apply lots of optimizations to make AI integration seamless. It's still closed
+source tho
+- Gemini Nano 4 (2B) is on par with last year's Gemma 3 (27B) model!! 
+
+### Use Cases
+- Speech Translations - 20+ languages supported
+- Embeddings - Search app content by meaning
+- Text to Speech - Human like voices from text
+- Function Calling - In-App Agents
+
+The rest of the talk demonstrates a use case for MLKit APIs. A fraud detection system
+
+:::note
+Only a limited list of devices support these features. See the list [here](https://developers.google.com/ml-kit/genai#device-support)
+:::
+
+---
+
+# [Scale your app for every screen with Compose](https://youtu.be/SGTkTKX7qq4)
+
+- A lot of explained examples on how to use the [MediaQuery API](https://developer.android.com/develop/adaptive-apps/guides/mediaquery)
+
+:::note
+Here "Media" does not mean audio/video. It means the physical medium through which the user is
+interacting with
+:::
+
+- It can be easily used in Previews too!!
+- Explained examples using the [Grids](https://developer.android.com/develop/adaptive-apps/guides/grid)
+API for UI Layout
+- Both Grids and FlexBox APIs are now Stable!
+- Explanation on how the Nav3 Scenes and SceneStratergies work
+- End segment dives into the engineering ROI of apps with adaptive screens. 
+
+:::note
+This talk is basically a
+[Navigation 3 Overview](https://developer.android.com/guide/navigation/navigation-3)
+:::
