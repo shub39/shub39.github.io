@@ -138,3 +138,16 @@ They shared some tips to improve UX quality
 - Train the agent in the component catalog to prevent reinventing patterns
 
 rest are standard architecture and code quality practices with compose
+
+---
+
+# [Graphics features in compose that can elevate your app](https://youtu.be/TirZPDPV8Dw)
+
+Possibly my favorite talk in this summit. Introducing a bunch of new APIs to compose
+
+- [Mesh Gradients](https://developer.android.com/develop/ui/compose/graphics/draw/mesh-gradient)
+- [Mesh API](https://developer.android.com/reference/android/graphics/Mesh)
+- Support for wide color gamut
+- [Polygon Shapes](https://developer.android.com/develop/ui/compose/graphics/draw/shapes)
+- [Progressive Blur](https://developer.android.com/develop/ui/compose/graphics/blur/overview)
+- Backdrop Render Effects
