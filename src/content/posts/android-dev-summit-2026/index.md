@@ -1,7 +1,7 @@
 ---
 title: Android Dev Summit 2026
 published: 2026-11-03
-description: Making a note of all the new and exciting things 
+description: Making a note of the new and exciting things 
 tags: [ Android, Jetpack Compose, Kotlin ]
 category: Summary
 image: cover.png
@@ -108,6 +108,33 @@ API for UI Layout
 - End segment dives into the engineering ROI of apps with adaptive screens. 
 
 :::note
-This talk is basically a
-[Navigation 3 Overview](https://developer.android.com/guide/navigation/navigation-3)
+This talk is basically a [Navigation 3 Overview](https://developer.android.com/guide/navigation/navigation-3)
 :::
+
+---
+
+# [Google Play - Migration to Compose](https://youtu.be/7h_kcpNGKnw)
+
+Fascinating approach they took. **Crawl, Walk, Jog, Run**
+
+- **Crawl** : Converting low traffic screens to compose. Like settings, etc. Goal of developing familiarity with compose
+- **Walk** : Converting High traffic components to compose like app bars to understand backwards compatibility and impact to latency and jank.
+- **Jog** : High Traffic Pages - fragments within navigation library. Improving latency and jank
+- **Run** : Compose navigation and Nav 3. Enabling compose's shared element transitions
+
+Pre compose theming was tedious. Compose theming is easy to use but there are some performance considerations
+that I never thought about. The cost of creating a color palette is non-negligible. 
+
+Overall compose makes the code more readable, compact, reusable and debuggable than xml.
+
+Cool thing they shared is where they faced problems while using LLMs and what they did to fix them
+
+![](llm_struggles.png)
+
+They shared some tips to improve UX quality
+
+- Have design templates bundled with color and typography tokens with built in support for light/dark and contrast modes
+- Flag hardcoded tokens in the export pipeline
+- Train the agent in the component catalog to prevent reinventing patterns
+
+rest are standard architecture and code quality practices with compose
