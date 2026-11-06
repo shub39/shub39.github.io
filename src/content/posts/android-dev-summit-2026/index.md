@@ -1,6 +1,6 @@
 ---
 title: Android Dev Summit 2026
-published: 2026-11-03
+published: 2026-11-06
 description: Making a note of the new and exciting things 
 tags: [ Android, Jetpack Compose, Kotlin ]
 category: Summary
@@ -43,8 +43,7 @@ draft: false
 - Expose app data as context to Gemini
 - New skill available with `android skills add appfunctions`
 - Shipping this requires registering your MCP in Play Console??
-- This is an early access feature, you need to apply for access through the QR code at the end of 
-the video
+- This is an early access feature, you need to apply for access through the QR code at the end of the video
 
 ---
 
@@ -57,9 +56,7 @@ the video
 - Offline models only available on some devices. On others, it uses a cloud fallback
 - Every Model has its own architecture optimized for its use case
 - **Per Layer Embeddings(PLE)** way to optimize model memory requirement. Storing in Flash not RAM
-- **Multi Token Prediction(MTP)** Uses a draft model to speed up inference upto 3x and 50% wait time
-reduction. It speculates the output of the main model and shares the KV cache with it. Fascinating 
-concepts, I will suggest you to look these up
+- **Multi Token Prediction(MTP)** Uses a draft model to speed up inference upto 3x and 50% wait time reduction. It speculates the output of the main model and shares the KV cache with it. Fascinating concepts, I will suggest you to look these up
 - Exposed in Android through **AI Core**
 - Cool demo of the offline capabilities in the video at [24:10](https://youtu.be/ekS4_gV6Ojc?list=PLQZJH-fZcZcc&t=1450)
 
@@ -71,10 +68,8 @@ concepts, I will suggest you to look these up
 
 ![](mlkit_optimizations.png)
 
-- A lot of cool breakthroughs in running models offline. Gemini Nano 4 uses significantly less RAM
-than before
-- MLKit APIs already apply lots of optimizations to make AI integration seamless. It's still closed
-source tho
+- A lot of cool breakthroughs in running models offline. Gemini Nano 4 uses significantly less RAM than before
+- MLKit APIs already apply lots of optimizations to make AI integration seamless. It's still closed source tho
 - Gemini Nano 4 (2B) is on par with last year's Gemma 3 (27B) model!! 
 
 ### Use Cases
@@ -101,8 +96,7 @@ interacting with
 :::
 
 - It can be easily used in Previews too!!
-- Explained examples using the [Grids](https://developer.android.com/develop/adaptive-apps/guides/grid)
-API for UI Layout
+- Explained examples using the [Grids](https://developer.android.com/develop/adaptive-apps/guides/grid) API for UI Layout
 - Both Grids and FlexBox APIs are now Stable!
 - Explanation on how the Nav3 Scenes and SceneStratergies work
 - End segment dives into the engineering ROI of apps with adaptive screens. 
@@ -122,8 +116,8 @@ Fascinating approach they took. **Crawl, Walk, Jog, Run**
 - **Jog** : High Traffic Pages - fragments within navigation library. Improving latency and jank
 - **Run** : Compose navigation and Nav 3. Enabling compose's shared element transitions
 
-Pre compose theming was tedious. Compose theming is easy to use but there are some performance considerations
-that I never thought about. The cost of creating a color palette is non-negligible. 
+Pre compose theming was tedious. Compose theming is easy to use but there are some performance 
+considerations that I never thought about. The cost of creating a color palette is non-negligible. 
 
 Overall compose makes the code more readable, compact, reusable and debuggable than xml.
 
@@ -151,3 +145,20 @@ Possibly my favorite talk in this summit. Introducing a bunch of new APIs to com
 - [Polygon Shapes](https://developer.android.com/develop/ui/compose/graphics/draw/shapes)
 - [Progressive Blur](https://developer.android.com/develop/ui/compose/graphics/blur/overview)
 - Backdrop Render Effects
+
+---
+
+# [New Experimental Build System - Lightbuild](https://youtu.be/0mYQtt2RfoQ)
+
+### Features
+- Declarative Syntax
+- AOT dependency resolution and faster sync
+- Easier for agents to work with
+
+Lightbuild uses gradle under the hood.
+
+![](lightbuild.png)
+
+### [LightBuild Docs](https://developer.android.com/tools/agents/lightbuild)
+Lightbuild is available in latest android studio canary and cli tools. Rest of the talk is a demo of
+lightbuild setup and the CLI
