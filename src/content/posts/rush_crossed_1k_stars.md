@@ -2,7 +2,7 @@
 title: Rush Crossed 1k Stars on GitHub
 published: 2026-10-10
 description: A risky app that I pushed through anyways — and what changed since
-tags: [ Android, Jetpack Compose, Kotlin, Rush ]
+tags: [ Android, Jetpack Compose, Kotlin ]
 category: Projects
 image: https://raw.githubusercontent.com/shub39/Rush/refs/heads/master/fastlane/metadata/android/en-US/images/featureGraphic.png
 draft: false

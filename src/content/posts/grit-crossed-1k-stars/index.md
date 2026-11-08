@@ -2,7 +2,7 @@
 title: Grit Crossed 1k Stars on GitHub
 published: 2026-05-29
 description: After 2 years, reflecting on this simple app I've built
-tags: [ Android, Jetpack Compose, Kotlin, Grit ]
+tags: [ Android, Jetpack Compose, Kotlin ]
 category: Projects
 image: cover.png
 draft: false
