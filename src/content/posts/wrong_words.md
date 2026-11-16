@@ -3,7 +3,7 @@ title: List of words that I don't like
 published: 2025-06-10
 description: Somehow these words feel wrong?
 category: Opinion
-draft: false
+draft: true
 ---
 
 # Why am I writing this?
@@ -36,3 +36,17 @@ online media is a necessity.
 
 Phrases like "Watching videos" and "Scrolling reels" are much better alternatives to *content consumption*.
 Instead of saying "I like the content they make", I prefer to say "I like the videos/pictures/blogs they post"
+
+---
+
+# P
+
+---
+
+## Product
+
+- We are building a *Product*
+- Their *Product* is going viral right now
+
+This feels like a very general term. This word is used for physical as well as for software stuff. I feel like there should
+be a clear distinct word for physical and digital goods. It's an unnecessary abstraction

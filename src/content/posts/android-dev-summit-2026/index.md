@@ -1,6 +1,6 @@
 ---
 title: Android Dev Summit 2026
-published: 2026-11-06
+published: 2026-11-16
 description: Making a note of the new and exciting things 
 tags: [ Android, Jetpack Compose, Kotlin ]
 category: Summary
@@ -8,7 +8,15 @@ image: cover.png
 draft: false
 ---
 
-# [The Keynote](https://youtu.be/8Lmv7LGgL4E) 
+# 📱 Android Dev Summit 2026
+
+A summary of the key announcements and talks from Android Dev Summit 2026.
+
+---
+
+## 🎤 The Keynote
+
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/8Lmv7LGgL4E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Android CLI is great for cheaper models
 - Android Prototype lets you run apps quickly in a separate lightweight process
@@ -21,7 +29,7 @@ draft: false
 
 ---
 
-# [The latest in Android dev tools](https://youtu.be/w-auFZP5gJo)
+## 🛠️ The latest in Android dev tools
 
 ![New Devtools](new_devtools.png)
 
@@ -32,12 +40,13 @@ draft: false
 
 ---
 
-# [Integrate your app with Android Intelligence](https://youtu.be/UsqDEfyOH2E)
+## 🤖 Integrate your app with Android Intelligence
 
 ### Android MCP 
-**Sample App** - [Jetpacker](https://goo.gle/jetpacker)
 
-![Android MCP](android_mcp.png)
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/UsqDEfyOH2E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Sample App** - [Jetpacker](https://goo.gle/jetpacker)
 
 - Allows Gemini to execute tasks in your apps. Like app intents in iOS
 - Expose app data as context to Gemini
@@ -45,9 +54,13 @@ draft: false
 - Shipping this requires registering your MCP in Play Console??
 - This is an early access feature, you need to apply for access through the QR code at the end of the video
 
+:::note
+Only a limited list of devices support these features. See the list [here](https://developers.google.com/ml-kit/genai#device-support)
+:::
+
 ---
 
-# [Inside Gemini Nano and Gemma 4](https://youtu.be/ekS4_gV6Ojc)
+## 🧠 Inside Gemini Nano and Gemma 4
 
 ### What the new Gemma models are capable of On Device
 
@@ -64,7 +77,7 @@ draft: false
 
 ---
 
-# [Optimizing with MLKit APIs](https://youtu.be/p-SZ1rWvErU)
+## ⚡ Optimizing with MLKit APIs
 
 ![](mlkit_optimizations.png)
 
@@ -80,13 +93,9 @@ draft: false
 
 The rest of the talk demonstrates a use case for MLKit APIs. A fraud detection system
 
-:::note
-Only a limited list of devices support these features. See the list [here](https://developers.google.com/ml-kit/genai#device-support)
-:::
-
 ---
 
-# [Scale your app for every screen with Compose](https://youtu.be/SGTkTKX7qq4)
+## 📱 Scale your app for every screen with Compose
 
 - A lot of explained examples on how to use the [MediaQuery API](https://developer.android.com/develop/adaptive-apps/guides/mediaquery)
 
@@ -107,7 +116,7 @@ This talk is basically a [Navigation 3 Overview](https://developer.android.com/g
 
 ---
 
-# [Google Play - Migration to Compose](https://youtu.be/7h_kcpNGKnw)
+## 📦 Google Play - Migration to Compose
 
 Fascinating approach they took. **Crawl, Walk, Jog, Run**
 
@@ -135,7 +144,7 @@ rest are standard architecture and code quality practices with compose
 
 ---
 
-# [Graphics features in compose that can elevate your app](https://youtu.be/TirZPDPV8Dw)
+## 🖼️ Graphics features in compose that can elevate your app
 
 Possibly my favorite talk in this summit. Introducing a bunch of new APIs to compose
 
@@ -148,7 +157,7 @@ Possibly my favorite talk in this summit. Introducing a bunch of new APIs to com
 
 ---
 
-# [New Experimental Build System - Lightbuild](https://youtu.be/0mYQtt2RfoQ)
+## ⚡ New Experimental Build System - Lightbuild
 
 ### Features
 - Declarative Syntax
